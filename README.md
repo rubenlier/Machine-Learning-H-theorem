@@ -1,0 +1,3 @@
+# Machine Learning H-theorem
+---
+In this repo I give the python files used for my upcoming work called Machine Learning H-theorem. The repo consists of a file for a simulation of hard disks with randomly initialized velocities, a training process of a pytorch model that learns to extract H-theorem from the sequential data by requiring that the model is monotonously increasing in time, and jupyter notebook files that process the results to obtain plots that are in the paper. For the hard disk simulation, I adapted code I found [here](https://scipython.com/blog/the-maxwellboltzmann-distribution-in-two-dimensions/). 
