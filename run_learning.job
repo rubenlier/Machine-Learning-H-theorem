@@ -1,0 +1,19 @@
+#!/bin/bash
+#SBATCH --partition=gpu_mig
+#SBATCH --job-name=vae_test
+#SBATCH --output=test_output_%j.out
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=4
+#SBATCH --gpus=1
+#SBATCH --time=1:00:00
+
+module purge
+module load 2023
+module load Anaconda3/2023.07-2
+eval "$(conda shell.bash hook)"
+conda activate vaeenv
+
+cd $HOME/pythonfolder
+python learning16.py
+python learning32.py
+python learning64.py
